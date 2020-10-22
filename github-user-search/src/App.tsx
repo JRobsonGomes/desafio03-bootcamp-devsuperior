@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.scss';
+import NavBar from './core/components/NavBar';
 
-const App = () => (
-  <div>
-    <h1>Olá</h1>
-  </div>
-);
+const App = () => {
+  return (
+    <NavBar />
+  )
+};
 
 export default App;
