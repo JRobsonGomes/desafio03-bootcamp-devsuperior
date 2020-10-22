@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const NavBar = () => (
     <nav className="row main-nav">
-        <a href="link">
+        <Link to="/">
             <h4 className="title-main-menu">Bootcamp DevSuperior</h4>
-        </a>
+        </Link>
     </nav>
 );
 
