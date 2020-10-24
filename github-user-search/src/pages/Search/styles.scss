@@ -4,10 +4,15 @@
 
 .search-content {
     padding: 66px 95px 40px 95px;
+    margin-bottom: 55px;
+    border-radius: 16px;
+    background: #e6f7ff;
 }
 
-.card-base {
-    background: #E6F7FF;
+.result-content {
+    padding: 24px 24px 27px 30px;
+    border-radius: 8px;
+    background: #f5f5f5;
 }
 
 .search-text-title {
@@ -24,9 +29,41 @@
 .search-input {
     width: 676px;
     height: 40px;
-    background: #FFFFFF;
-    border: 1px solid #D9D9D9;
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
     box-sizing: border-box;
     border-radius: 4px;
     margin-bottom: 24px;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.info-container {
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.statistics-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 13px;
+}
+
+.image {
+    margin-right: 45px;
+}
+
+.statistics {
+    padding: 1px 14px 1px 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
