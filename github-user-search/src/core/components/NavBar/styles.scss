@@ -3,9 +3,11 @@
     height: 62px;
     display: flex;
     align-items: center;
+    padding-left: 40px;
 }
 
 .title-main-menu {
+    display: table-cell;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -13,5 +15,4 @@
     line-height: 32px;
     align-items: center;    
     color: #FFFFFF;
-    margin-left: 40px;
 }

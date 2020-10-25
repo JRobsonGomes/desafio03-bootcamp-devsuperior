@@ -10,8 +10,8 @@ const ImageLoader = () => (
     backgroundColor="#dedede"
     foregroundColor="#f5f5f5"
   >
-    <rect x="19" y="23" rx="2" ry="2" width="284" height="284" /> 
-    <rect x="23" y="319" rx="0" ry="0" width="155" height="48" />
+    <rect x="0" y="23" rx="6" ry="6" width="284" height="284" /> 
+    <rect x="0" y="319" rx="6" ry="6" width="155" height="48" />
   </ContentLoader>
 )
 
