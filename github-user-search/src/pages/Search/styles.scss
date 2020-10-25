@@ -30,3 +30,20 @@
     border-radius: 4px;
     margin-bottom: 24px;
 }
+
+@media (max-width: 768px) 
+{
+  .search-input
+   {
+    width: calc(100% - 100px);
+   }
+
+   .search-container {
+        padding-right: 45px;
+        padding-left: 45px;
+    }
+
+   .search-content {
+       padding-left: 30px;
+   }
+}

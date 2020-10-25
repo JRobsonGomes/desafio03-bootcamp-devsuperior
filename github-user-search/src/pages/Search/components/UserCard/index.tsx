@@ -8,6 +8,10 @@ type Props = {
     user: User;
 }
 
+const formatDate = (date: string) => {
+    const dateFormated = new Date(date);
+    return (new Intl.DateTimeFormat('pt-BR').format(dateFormated));
+}
 
 const UserCard = ({ user }: Props) => (
     <div className="result-container">
@@ -48,7 +52,7 @@ const UserCard = ({ user }: Props) => (
                     <div className="info-input">
                         <p className="label-text" >Membro desde:</p>
                         <span className="text-input">
-                            {user?.created_at}
+                            {formatDate(user?.created_at)}
                         </span>
                     </div>
                 </div>
