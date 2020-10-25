@@ -2,26 +2,17 @@ import React, { useState } from 'react';
 import Button from 'core/components/Button';
 import axios from 'axios';
 import './styles.scss';
+import { User } from 'core/types/User';
+import UserCard from './components/UserCard';
+import SearchLoader from './components/SearchLoader';
 
 const BASE_URL = 'https://api.github.com/users'
 
-type User = {
-    avatar_url: string,
-    blog: string,
-    company: string,
-    created_at: string,
-    followers: number,
-    following: number,
-    html_url: string,
-    location: string,
-    login: string,
-    name: string,
-    public_repos: number
-}
 
 const Search = () => {
     const [search, setSearch] = useState('');
     const [userData, setUserData] = useState<User>();
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(event.target.value);
@@ -29,10 +20,12 @@ const Search = () => {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        setIsLoading(true);
         axios.get(`${BASE_URL}/${search}`)
-            .then(response => setUserData(response.data));
-
-        console.log(userData);
+            .then(response => setUserData(response.data))
+            .finally(() => {
+                setIsLoading(false);
+            });
     }
 
     return (
@@ -50,50 +43,8 @@ const Search = () => {
                     <Button text="Encontrar" />
                 </div>
             </form>
-            <div className="result-container">
-                <div className="result-row">
-                    <img src={userData?.avatar_url} alt={userData?.name} className="image" />
-                    <div className="result-col-2">
-                        <div className="statistics-container">
-                            <div className="statistics">
-                                <p className="text-statistics" >Repositórios públicos: {userData?.public_repos} </p>
-                            </div>
-                            <div className="statistics">
-                                <p className="text-statistics" >Seguidores: {userData?.followers} </p>
-                            </div>
-                            <div className="statistics">
-                                <p className="text-statistics" >Seguindo: {userData?.following} </p>
-                            </div>
-                        </div>
-                        <div className="info-container" >
-                            <h2 className= "info-title" >Informações</h2>
-                            <input
-                                readOnly={true}
-                                value={`Empresa: ${userData?.company}`}
-                                className="info-input text-input"
-                            />
-                            <input
-                                readOnly={true}
-                                value={`Website/Blog: ${userData?.blog}`}
-                                className="info-input text-input"
-                            />
-                            <input
-                                readOnly={true}
-                                value={`Localidade: ${userData?.location}`}
-                                className="info-input text-input"
-                            />
-                            <input
-                                readOnly={true}
-                                value={`Membro desde: ${userData?.created_at}`}
-                                className="info-input text-input"
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className="result-btn">
-                    <Button text="Ver perfil" />
-                </div>
-            </div>
+            {/* <SearchLoader /> */}
+            { isLoading ? <SearchLoader /> : !userData ? <></> : <UserCard user={userData} />}
         </div >
     );
 };

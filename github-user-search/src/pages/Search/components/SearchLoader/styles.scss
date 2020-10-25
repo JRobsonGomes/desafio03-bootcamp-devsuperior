@@ -1,0 +1,26 @@
+.search-loader-container {
+    height: 387px;
+    border-radius: 8px;
+    background: #f5f5f5;
+}
+
+.search-loader-row {
+    height: 100%;
+    display: flex;
+    padding-right: 23px;
+    margin-top: 23px;
+    margin-left: 28px;
+}
+
+.search-loader-image {
+    width: 284px;
+    //height: 280px;
+    margin-right: 45px;
+}
+
+.search-loader-col-2 {
+    margin-top: 33px;
+    height: 280px;
+    display: block;
+    width: calc(100% - 315px);
+}

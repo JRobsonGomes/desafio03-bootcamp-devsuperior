@@ -9,13 +9,6 @@
     background: #e6f7ff;
 }
 
-.result-container {
-    padding-top: 23px;
-    padding-bottom: 27px;
-    border-radius: 8px;
-    background: #f5f5f5;
-}
-
 .search-text-title {
     font-family: Roboto;
     font-style: normal;
@@ -28,6 +21,7 @@
 }
 
 .search-input {
+    padding-left: 13px;
     width: 676px;
     height: 40px;
     background: #ffffff;
@@ -35,98 +29,4 @@
     box-sizing: border-box;
     border-radius: 4px;
     margin-bottom: 24px;
-}
-
-.result-row {
-    height: 280px;
-    display: flex;
-    padding-right: 23px;
-    margin-left: 30px;
-    margin-bottom: 20px;
-}
-
-.result-btn {
-    margin-left: 30px;
-}
-
-.image {
-    width: 284px;
-    //height: 280px;
-    margin-right: 45px;
-}
-
-.result-col-2 {
-    display: block;
-    width: calc(100% - 315px);
-}
-
-.info-container {
-    height: calc(100% - 35px);
-    background: #ffffff;
-    border: 1px solid #d9d9d9;
-    box-sizing: border-box;
-    border-radius: 6px;
-}
-
-.statistics-container {
-    height: 22px;
-    display: flex;
-    gap: 8px;
-    margin-bottom: 13px;
-}
-
-.statistics {
-    padding: 1px 14px 1px 14px;
-    background: #ffffff;
-    border: 1px solid #d9d9d9;
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-
-.text-statistics {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 20px;
-    align-items: center;
-    color: #595959;
-}
-
-.info-title {
-    margin-top: 8px;
-    margin-bottom: 19px;
-    margin-left: 14px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
-    align-items: center;
-    color: #1890ff;
-}
-
-.info-input {
-    display: flex;
-    padding-left: 10px;
-    height: 40px;
-    margin-bottom: 5px;
-    margin-left: 14px;
-    border: 1px solid #d9d9d9;
-    box-sizing: border-box;
-    border-radius: 4px;
-    width: calc(100% - 28px);
-}
-
-.text-input {
-    //margin-left: 10px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-    align-items: center;
-    color: #737373;
 }
